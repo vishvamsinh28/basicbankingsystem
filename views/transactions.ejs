@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="/transactionssty.css">
+</head>
+<body>
+    <% if(transactions.length === 0) { %> 
+        <center><h3>NO TRANSACTIONS HAPPENED YET</h3></center>
+        <% }else{ %> 
+    <center><h1>Transactions History</h1></center>
+    <table border="3px solid black" align="center" text="center" style="text-align: center;">
+        <thead>
+            <td><b>SENDER</b></td>
+            <td><b>RECEIVER</b></td>
+            <td><b>AMOUNT</b></td>
+            <td><b>DATE</b></td>
+        </thead>
+        <% for(trans of transactions){ %> 
+        <tr>
+            <td><%= trans.sender %></td>
+            <td><%= trans.receiver %></td>
+            <td>$<%= trans.amount %></td>
+            <td><%= trans.time %></td>
+        </tr>
+        <% } %> 
+    </table>
+    <% } %> 
+    <center style="margin-top: 20px; margin-bottom: 30px;"><a href="/">HOME</a></center>
+    <center style="margin-top: 20px;"><a href="/clear">CLEAR HISTORY</a></center>
+</body>
+</html>

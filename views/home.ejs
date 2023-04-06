@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="homesty.css">
+</head>
+<body>
+    <div class="head">
+        <center><h2>Welcome to our bank</h2></center>
+        <center><h4>Click on name to View or Transfer</h4></center>
+    </div>
+    <div class="oli">
+    <ol>
+    <% for(user of users){ %>
+            <li style="margin: 5px;"><a href="/transfer/<%= user.id %> "><%= user.username %></a></li>
+   <% } %>
+    </ol>
+</div>
+    <a href="/transactions" id="tra">Transactions</a>
+</body>
+</html>

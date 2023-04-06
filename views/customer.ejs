@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.username %> </title>
+    <link rel="stylesheet" href="/customersty.css">
+</head>
+<body>
+    <div>
+    <center><h3>Receiver ==> { NAME : <%= user.username %> } { BALANCE : $<%= user.balance %> } { EMAIL : <%= user.email %>  }</h3></center>
+<center>
+    <form action="/receiver/<%= id %>/sender/<%= id2 %> " method="post">
+        <input type="number" name="amount" placeholder="Enter the amount" min=0 style="width: 200px; margin-bottom: 30px;">
+        <br><button>Send Money</button>
+    </form>
+</center>
+</div>
+</body>
+</html>

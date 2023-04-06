@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="/transfer.css">
+</head>
+<body>
+        <% for(user of users) { %> 
+            <% if(user.id===id) { %>
+                <center><h2>{ NAME : <%= user.username%> } <hr>{ BALANCE : $<%= user.balance%> } <hr>{ EMAIL : <%= user.email %> }<hr></h4></center>
+                <% } %> 
+            <% } %> 
+            <center><h4>Click on receivers name for transfering money</h4></center>
+    <div class="oli">
+
+    <ol>
+        <% for(user of users){ %>
+            <% if(user.id === id){ %>
+                <% continue; }else{%>  
+                <li style="margin: 5px;"><a href="/customer/<%= user.id %>/sender/<%= id %> "><%= user.username %></a></li>
+       <%} } %>
+        </ol></div>
+</body>
+</html>
